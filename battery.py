@@ -19,7 +19,7 @@ player.number_of_loops = -1
 player.play()
 
 while True:
-    req = requests.request("GET", "http://neko-san.net/battery/" +str(UIDevice.currentDevice().identifierForVendor().UUIDString()) + "/" +
+    req = requests.request("GET", urlprefix +str(UIDevice.currentDevice().identifierForVendor().UUIDString()) + "/" +
   (datetime.now().isoformat()) + "/" + str(UIDevice.currentDevice().batteryLevel()))
     sleep(5)
 
